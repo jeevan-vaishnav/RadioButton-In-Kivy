@@ -1,0 +1,39 @@
+<MyLayout>
+    BoxLayout:
+        orientation:'vertical'
+        size:root.width,root.height
+
+        Label:
+            text:'Select Laptop Toppings'
+            font_size:32
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text:'HP'
+                font_size:20
+            CheckBox:
+                group:"Laptops"
+                on_active:root.checkBox_click(self,self.active,"HP")
+
+
+            Label:
+                text:'Dell'
+                font_size:20
+            CheckBox:
+                group:"Laptops"
+                on_active:root.checkBox_click(self,self.active,"Dell")
+
+
+            Label:
+                text:'Lenovo'
+                font_size:20
+            CheckBox:
+                group:"Laptops"
+                on_active:root.checkBox_click(self,self.active,"Lenovo")
+
+            Label:
+                id:output_label
+                text:''
+                font_size:32
